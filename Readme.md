@@ -147,6 +147,14 @@ Exposes Consolidate.requires as a function.
 
 Any unrecognised options will be passed on to consolidate.js. You can use this, for example, to disable caching by passing `cache: false`. See the [consolidate.js documentation](https://github.com/tj/consolidate.js) for all options supported by consolidate.
 
+## FAQ
+
+#### Why are partials relative to root, while the provided pattern is applied relative to src
+
+The reason is that you don't want your partials to end up in your dist (since they're only partials and not complete files meant for output). So we let you choose where your partials are in your project folder (which should be outside of src).
+
+pattern is relative to src because it doesn't make sense to use a pattern outside of src, since metalsmith only processes files from src.
+
 ### Filename property
 
 Some templating engines require a `filename` property to be set on each file, if you want to include or extend templates. For that, use [metalsmith-filenames](https://github.com/MoOx/metalsmith-filenames).
