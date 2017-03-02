@@ -24,7 +24,7 @@ You can use `metalsmith-in-place` with the with Metalsmith's
 [Javascript API](https://github.com/segmentio/metalsmith#api) or 
 [CLI](https://github.com/segmentio/metalsmith#cli).
 
-**Note:** When using `jstransformer` as the rendering engine, you'll also need to rename your files, since `jstransformer` plugins use file extensions to mark files for transformation. So, to process a file called `index.html` using `jstransformer-markdown` and then `jstransformer-handlebars`, you'd name it `index.html.handlebars.markdown`.
+**Note:** When using `jstransformer` as the rendering engine, you'll also need to rename your files, since `jstransformer` plugins use file extensions to mark files for transformation. Use [this list](https://github.com/jstransformers/inputformat-to-jstransformer/blob/master/dictionary.json) as a reference to find the extensions you can use for a specific transformer. So, to process a file called `index.html` using `jstransformer-markdown` and then `jstransformer-handlebars`, you'd name it `index.html.handlebars.markdown`.
 
 ### Options
 
